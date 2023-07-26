@@ -1,0 +1,4 @@
+node_modules/
+db/conn.js
+package-lock.json
+.env
