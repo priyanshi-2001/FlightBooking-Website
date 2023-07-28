@@ -47,7 +47,7 @@ const PaymentPage = () => {
            console.log({res});
             if(res.error==='NA'){
             const options = {
-            key:'rzp_test_i18RlDcY6Gh9tr' , // Enter the Key ID generated from the Dashboard
+            key:'yourrazorpayKEY' , // Enter the Key ID generated from the Dashboard
             amount: res.message.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             currency: "INR",
             name: "Test Name",
