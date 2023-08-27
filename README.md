@@ -7,7 +7,7 @@ Landing Page with Flight Search: Users can search for flights and select "Book N
 Details Filling Page: Enter passenger information, seat class, type of booking, and proceed.<br/>
 Baggage Details: Input baggage details for passengers and proceed.<br/>
 Food Selection: Select food options for passengers with associated costs. <br/>
-Seat Selection: Choose seats, view real-time seat availability, and see seat prices. <br/>
+Seat Selection: Choose seats, view real-time seat availability, and see seat prices. (<b>Used MongoDB Clusters, MongoDB Transactions, Used Web Sockets to show if some user did booking of a seat of that flightId</b>) <br/>
 <b>Payment Page</b>: Display payment amount, redirect to Razorpay payment gateway, and proceed to AfterPayment Page. <br/><br/>
 
 <b>Caching with Redis:</b> <br/>
@@ -16,7 +16,10 @@ Utilize Redis for caching cities data to enhance performance and reduce database
 
 <b>Flight Status Change Email:</b><br/>
 
+Used findOneAndUpdate middleware so that if a flight Status is changed we will send email to all the passengers in that flightId<br/>
 Notify passengers via email when flight status changes to "Delayed".<br/>
+Used nodemailer for email sending functionality<br/>
+Used fileSystem Module in Node.js <br/>
 Admin login can change flight status, with middleware ensuring proper email sending.<br/><br/>
 <b>Web Check-In:</b><br/>
 
